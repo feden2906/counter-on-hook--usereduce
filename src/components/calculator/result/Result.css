@@ -1,0 +1,10 @@
+.result {
+    height: 50px;
+    width: 90%;
+    text-align: center;
+    margin: 20px;
+    font-size: 39px;
+    font-weight: 700;
+    background-color: #deac5d;
+    border: black 2px solid;
+}

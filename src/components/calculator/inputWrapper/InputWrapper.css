@@ -1,0 +1,35 @@
+.input-wrapper {
+    display: flex;
+    align-items: center;
+    width: 90%;
+    font-size: 21px;
+    margin: 15px auto 0;
+}
+
+.btn2 {
+    height: 39px;
+    width: 40%;
+    font-size: 17px;
+    border-radius: 5px;
+    border: 2px solid #474747;
+}
+
+.btn2:hover {
+    background-color: #bebebe;
+    border: 2px solid black;
+    cursor: pointer;
+}
+
+.input{
+    height: 30px;
+    width: 35%;
+    margin-left: 10px;
+    margin-right: 10px;
+    font-size: 20px;
+    padding: 2px 7px;
+    border: 3px solid #4a4a4a;
+}
+
+.error {
+    border: 3px solid red;
+}

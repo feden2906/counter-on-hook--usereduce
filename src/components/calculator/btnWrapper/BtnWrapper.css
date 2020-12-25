@@ -1,0 +1,20 @@
+.btn-wrapper {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.btn {
+    height: 40px;
+    width: 40%;
+    margin: 15px auto;
+    font-size: 17px;
+    border-radius: 5px;
+    border: 2px solid #474747;
+}
+
+.btn:hover {
+    background-color: #bebebe;
+    border: 2px solid black;
+    cursor: pointer;
+}
