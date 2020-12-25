@@ -44,7 +44,8 @@ const reducer = (state, action) => {
         return {...state, inputValue: action.payload, showError: false}
       }
     default: {
-      console.log("ERROR")
+      console.log(`ERROR! Action ${action.type} not found.`)
+      return state
     }
   }
 }
