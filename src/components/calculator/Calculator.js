@@ -7,11 +7,13 @@ import InputWrapper from "./inputWrapper/InputWrapper";
 
 const reducer = (state, action) => {
   const {result, inputValue} = state
-  switch (action.type) {
+  const {type, payload} = action
+  switch (type) {
     case "PLUS_ONE": {
+      console.log(payload);
       return {
         ...state,
-        result: result + 1
+        result: result + payload
       }
     }
     case "PLUS_HUNDRED": {
