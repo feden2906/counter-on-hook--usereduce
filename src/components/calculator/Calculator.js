@@ -4,53 +4,8 @@ import Title from "./title/Title";
 import Result from "./result/Result";
 import BtnWrapper from "./btnWrapper/BtnWrapper";
 import InputWrapper from "./inputWrapper/InputWrapper";
-
-const reducer = (state, action) => {
-  const {result, inputValue} = state
-  switch (action.type) {
-    case "PLUS_ONE": {
-      return {
-        ...state,
-        result: result + 1
-      }
-    }
-    case "PLUS_HUNDRED": {
-      return {result: result + 100}
-    }
-    case "MINUS_ONE": {
-      if (result - 1 < 0) {
-        return {result: 0}
-      } else {
-        return {result: result - 1}
-      }
-    }
-    case "MINUS_HUNDRED": {
-      if (result - 100 < 0) {
-        return {result: 0}
-      } else {
-        return {result: result - 100}
-      }
-    }
-    case "RESET": {
-      return {result: 0}
-    }
-    case "SUBMIT_NUMBER": {
-      if (isNaN(inputValue) || action.payload === '') {
-        return {...state, showError: true}
-      }
-      return {...state, result: result + inputValue, inputValue: ''}
-    }
-    case "SET_VALUE_REACT_INPUT": {
-        return {...state, inputValue: action.payload, showError: false}
-      }
-    default: {
-      console.log(`ERROR! Action ${action.type} not found.`)
-      return state
-    }
-  }
-}
-
-const initialState = {result: 0, showError: false, inputValue: ''}
+import initialState from '../../store/initialState';
+import reducer from '../../reducer/reducer';
 
 export default function Calculator() {
   const [state, dispatch] = useReducer(reducer, initialState)
